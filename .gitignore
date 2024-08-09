@@ -1,0 +1,22 @@
+# Ignore VS Code settings directory
+.vscode/
+
+# Ignore build directories
+build/
+
+# Ignore vcpkg installed packages directory
+vcpkg_installed/
+
+# Ignore any other temporary files or directories
+*.tmp
+*.log
+*.bak
+
+# Ignore Windows specific files
+Thumbs.db
+Desktop.ini
+
+# Ignore batch script output files (if any)
+*.bat~
+*.bat.bak
+*.bat.swp
