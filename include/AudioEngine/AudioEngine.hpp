@@ -1,6 +1,5 @@
 #pragma once
 
-#include <vector>
 #include <memory>
 
 #include <RtAudio.h>
@@ -16,14 +15,9 @@ public:
     AudioEngine(const AudioEngine&) = delete;
     AudioEngine& operator=(const AudioEngine&) = delete;
 
-    static void initInstance(
-        unsigned int sampleRate,
-        unsigned int bufferSize
-    );
+    static void initInstance(std::shared_ptr<AudioGenerator> generator);
 
-    static AudioEngine& getInstance();
-
-    void addGenerator(std::shared_ptr<AudioGenerator> generator);
+    static const AudioEngine& getInstance();
 
 private:
     static AudioEngine m_instance;
@@ -45,10 +39,7 @@ private:
 
     RtAudio m_dac;
 
-    unsigned int m_sampleRate;
-    unsigned int m_bufferSize;
-
-    std::vector<std::shared_ptr<AudioGenerator>> m_generators;
+    std::shared_ptr<AudioGenerator> m_generator;
 };
 
 }
