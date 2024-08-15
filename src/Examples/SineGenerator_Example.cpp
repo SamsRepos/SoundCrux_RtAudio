@@ -1,4 +1,4 @@
-#include "AudioEngine/Example/SineGenerator_Example.hpp"
+#include "Examples/SineGenerator_Example.hpp"
 
 #include <cmath>
 

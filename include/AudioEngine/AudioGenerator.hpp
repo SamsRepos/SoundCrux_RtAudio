@@ -3,7 +3,7 @@
 namespace sc 
 {
 
-const unsigned int DEFAULT_SAMPLE_RATE = 44100;
+const unsigned int DEFAULT_SAMPLE_RATE = 48000;
 const unsigned int DEFAULT_BUFFER_SIZE = 256;
 
 struct StereoSample;
