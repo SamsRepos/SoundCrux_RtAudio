@@ -8,10 +8,10 @@ namespace sc
 const double PI = 3.14159265358979323846;
 
 SineGenerator_Example::SineGenerator_Example(
-    unsigned int sampleRate,
-    unsigned int bufferSize,
     double frequency,
-    double amplitude
+    double amplitude,
+    unsigned int sampleRate,
+    unsigned int bufferSize
 )
 :
 AudioGenerator(sampleRate, bufferSize),

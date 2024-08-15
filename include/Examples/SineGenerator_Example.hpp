@@ -17,10 +17,10 @@ class SineGenerator_Example : public AudioGenerator
 {
 public:
     SineGenerator_Example(
-        unsigned int sampleRate = DEFAULT_SAMPLE_RATE,
-        unsigned int bufferSize = DEFAULT_BUFFER_SIZE,
         double frequency        = DEFAULT_FREQUENCY,
-        double amplitude        = DEFAULT_AMPLITUDE
+        double amplitude        = DEFAULT_AMPLITUDE,
+        unsigned int sampleRate = DEFAULT_SAMPLE_RATE,
+        unsigned int bufferSize = DEFAULT_BUFFER_SIZE
     );
 
 protected:
