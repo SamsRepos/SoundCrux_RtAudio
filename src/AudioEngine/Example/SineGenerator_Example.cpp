@@ -1,15 +1,13 @@
-#include "AudioEngine/AudioGenerators/SineGenerator.hpp"
+#include "AudioEngine/Example/SineGenerator_Example.hpp"
 
 #include <cmath>
-
-//#include "AudioEngine/AudioGenerators/Base/StereoSample.hpp"
 
 namespace sc
 {
 
 const double PI = 3.14159265358979323846;
 
-SineGenerator::SineGenerator(
+SineGenerator_Example::SineGenerator_Example(
     unsigned int sampleRate,
     unsigned int bufferSize,
     double frequency,
@@ -23,7 +21,7 @@ m_amplitude(amplitude)
 
 }
 
-StereoSample SineGenerator::GetNextSample()
+StereoSample SineGenerator_Example::GetNextSample()
 {
     static double phase = 0.0;
     const double increment = 2.0 * PI * m_frequency / m_sampleRate;

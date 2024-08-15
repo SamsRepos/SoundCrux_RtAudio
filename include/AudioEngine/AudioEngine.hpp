@@ -26,13 +26,12 @@ private:
     ~AudioEngine();
 
     static int audioCallback(
-        void *outputBuffer, 
-        void *inputBuffer, 
-        unsigned int 
-        nBufferFrames,
+        void* outputBuffer, 
+        void* inputBuffer, 
+        unsigned int nBufferFrames,
         double streamTime, 
         RtAudioStreamStatus status,
-        void *userData
+        void* userData
     );
     
     bool m_initialised = false;

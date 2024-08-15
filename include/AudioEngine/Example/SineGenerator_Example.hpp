@@ -1,8 +1,8 @@
 #pragma once
 
-#include "AudioEngine/AudioGenerators/Base/AudioGenerator.hpp"
+#include "AudioEngine/AudioGenerator.hpp"
 
-#include "AudioEngine/AudioGenerators/Base/StereoSample.hpp"
+#include "AudioEngine/StereoSample.hpp"
 
 
 namespace sc 
@@ -13,10 +13,10 @@ const double DEFAULT_AMPLITUDE = 0.5;
 
 //struct StereoSample;
 
-class SineGenerator : public AudioGenerator 
+class SineGenerator_Example : public AudioGenerator 
 {
 public:
-    SineGenerator(
+    SineGenerator_Example(
         unsigned int sampleRate = DEFAULT_SAMPLE_RATE,
         unsigned int bufferSize = DEFAULT_BUFFER_SIZE,
         double frequency        = DEFAULT_FREQUENCY,

@@ -1,4 +1,4 @@
-#include "AudioEngine/AudioGenerators/Base/StereoSample.hpp"
+#include "AudioEngine/StereoSample.hpp"
 
 namespace sc
 {
