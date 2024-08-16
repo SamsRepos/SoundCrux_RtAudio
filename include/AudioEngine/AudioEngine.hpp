@@ -15,9 +15,11 @@ public:
     AudioEngine(const AudioEngine&) = delete;
     AudioEngine& operator=(const AudioEngine&) = delete;
 
-    static void initInstance(std::shared_ptr<AudioGenerator> generator);
+    static void InitInstance(std::shared_ptr<AudioGenerator> generator);
 
-    static const AudioEngine& getInstance();
+    //static const AudioEngine& GetInstance();
+
+    static void StopAndCloseStream();
 
 private:
     static AudioEngine m_instance;

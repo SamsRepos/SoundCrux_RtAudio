@@ -12,7 +12,7 @@ const RtAudioFormat RT_AUDIO_FORMAT = RTAUDIO_FLOAT64;
 
 AudioEngine AudioEngine::m_instance;
 
-void AudioEngine::initInstance(std::shared_ptr<AudioGenerator> generator)
+void AudioEngine::InitInstance(std::shared_ptr<AudioGenerator> generator)
 {
     m_instance.m_generator  = generator;
 
@@ -38,15 +38,24 @@ void AudioEngine::initInstance(std::shared_ptr<AudioGenerator> generator)
     m_instance.m_initialised = true;
 }
 
-const AudioEngine& AudioEngine::getInstance(
-)
+void AudioEngine::StopAndCloseStream()
 {
-    if(!m_instance.m_initialised) {
-        throw std::runtime_error("AudioEngine instance not initialized.");
+    m_instance.m_dac.stopStream();
+    if (m_instance.m_dac.isStreamOpen()) 
+    {
+        m_instance.m_dac.closeStream();
     }
-
-    return m_instance;
 }
+
+// const AudioEngine& AudioEngine::GetInstance(
+// )
+// {
+//     if(!m_instance.m_initialised) {
+//         throw std::runtime_error("AudioEngine instance not initialized.");
+//     }
+
+//     return m_instance;
+// }
 
 AudioEngine::AudioEngine() = default;
 
