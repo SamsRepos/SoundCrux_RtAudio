@@ -8,26 +8,31 @@
 namespace sc 
 {
 
-const double DEFAULT_FREQUENCY = 440.0; // Frequency of the sine wave (Hz)
+const double DEFAULT_FREQUENCY = 440.0;
 const double DEFAULT_AMPLITUDE = 0.5;
 
 //struct StereoSample;
 
-class SineGenerator_Example : public AudioGenerator 
+class Oscillator_Example : public AudioGenerator 
 {
 public:
-    SineGenerator_Example(
+    Oscillator_Example(
         double frequency        = DEFAULT_FREQUENCY,
         double amplitude        = DEFAULT_AMPLITUDE,
         unsigned int sampleRate = DEFAULT_SAMPLE_RATE,
         unsigned int bufferSize = DEFAULT_BUFFER_SIZE
     );
 
-protected:
-    virtual StereoSample GetNextSample();
+    void SetFrequency(double frequency);
+    void SetAmplitude(double amplitude);
 
-private:
+protected:
+    //virtual StereoSample GetNextSample();
+    
     double m_frequency;
     double m_amplitude;
+
+private:
 };
+
 }

@@ -4,14 +4,14 @@
 #include <iostream>
 
 #include <SoundCrux.hpp>
-#include "Examples/SineGenerator_Example.hpp"
+#include "Examples/Oscillators/SineOsc_Example.hpp"
 
 namespace sc
 {
 
 void Program_Example()
 {
-    std::shared_ptr<SineGenerator_Example> generator = std::make_shared<SineGenerator_Example>();
+    std::shared_ptr<SineOsc_Example> generator = std::make_shared<SineOsc_Example>();
 
 
     AudioEngine::initInstance(generator);
