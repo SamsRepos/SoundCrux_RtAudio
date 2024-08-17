@@ -4,4 +4,4 @@ include(CMakeFindDependencyMacro)
 
 find_dependency(RtAudio REQUIRED)
 
-include("${CMAKE_CURRENT_LIST_DIR}/SoundCruxTargets.cmake")
+include("${CMAKE_CURRENT_LIST_DIR}/SoundCrux_RtAudioTargets.cmake")
