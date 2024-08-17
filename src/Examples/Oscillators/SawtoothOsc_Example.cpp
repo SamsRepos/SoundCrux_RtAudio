@@ -17,7 +17,7 @@ Oscillator_Example(frequency, amplitude, sampleRate, bufferSize)
 
 StereoSample SawtoothOsc_Example::GetNextSample()
 {
-    static sc::Sample sample = m_amplitude;
+    static Sample sample = m_amplitude;
 
     sample -= (2 * m_amplitude) / (m_sampleRate / m_frequency);
 
@@ -26,7 +26,7 @@ StereoSample SawtoothOsc_Example::GetNextSample()
         sample = m_amplitude;
     }
 
-    return sc::StereoSample(sample);
+    return StereoSample(sample);
 }
 
 
