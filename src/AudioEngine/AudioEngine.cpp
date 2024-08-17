@@ -30,7 +30,7 @@ void AudioEngine::InitInstance(std::shared_ptr<AudioGenerator> generator)
         RT_AUDIO_FORMAT,
         generator->m_sampleRate,
         &(unsigned int(generator->m_bufferSize)),
-        &audioCallback
+        &AudioCallback
     );
 
     m_instance.m_dac.startStream();
@@ -67,7 +67,7 @@ AudioEngine::~AudioEngine() {
     }
 }
 
-int AudioEngine::audioCallback(
+int AudioEngine::AudioCallback(
     void *outputBuffer,
     void *inputBuffer,
     unsigned int nBufferFrames,

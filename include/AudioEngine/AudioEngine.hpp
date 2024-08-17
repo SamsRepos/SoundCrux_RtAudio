@@ -27,7 +27,7 @@ private:
     AudioEngine();
     ~AudioEngine();
 
-    static int audioCallback(
+    static int AudioCallback(
         void* outputBuffer, 
         void* inputBuffer, 
         unsigned int nBufferFrames,
